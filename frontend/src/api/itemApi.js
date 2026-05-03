@@ -1,7 +1,9 @@
 import axios from "axios";
 
+const API_URL = "https://item-manager-mern-dqks.onrender.com";
+
 const API = axios.create({
-  baseURL: import.meta.env.VITE_API_URL || "http://localhost:5000/api",
+  baseURL: `${API_URL}/api`,
 });
 
 export const getItems = () => API.get("/items");
